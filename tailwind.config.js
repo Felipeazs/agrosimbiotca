@@ -11,5 +11,6 @@ module.exports = {
         extend: {
             fontFamily: ['Josefin Sans', 'sans-serif']
         }
-    }
+    },
+    plugins: []
 }
