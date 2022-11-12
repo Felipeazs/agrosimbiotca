@@ -1,26 +1,69 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Josefin';
+        font-weight: 400;
+        font-weight: normal;
+        src: url('../public/fonts/JosefinSans-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'Josefin';
+        font-weight: 900;
+        font-weight: black;
+        src: url('../public/fonts/JosefinSans-Bold.ttf');
+    }
+}
+
+* {font-family: 'Josefin', sans-serif}
+html {
+    scroll-behavior: smooth;
+}
+
+.App {
+    background-color: #000000;
+}
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #000000;
+}
+.active {
+    text-decoration: underline rgb(63, 61, 86) 4px;
+}
+.custon-shape-divider-botoom-1663882325{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-bottom-1663882325 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 294px;
+}
+.custom-shape-divider-bottom-1663882325 .shape-fill {
+    fill: #fff;
+}
+.custom-shape-divider-top-1663884187 svg {
+    position: relative;
+    display: block;
+    width: calc(100%);
+    height: 169px;
+}
+.custom-shape-divider-top-1663884187 .shape-fill {
+    fill: #ffffff14;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.button:hover {
+    /* border: solid 2px rgb(49, 20, 54); */
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.button:focus {
+    border: solid 2px rgb(49, 20, 54);
 }
