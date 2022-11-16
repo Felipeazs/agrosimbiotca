@@ -21,7 +21,9 @@ const Layout = ({ children }: PropsWithChildren) => {
         logo = Logo1
     }
 
-    const submitHandler = (event: FormEvent) => { }
+    const submitHandler = (event: FormEvent) => { 
+        event.preventDefault()
+    }
     const onInputChange = (event: ChangeEvent) => { }
 
     return (
@@ -53,10 +55,11 @@ const Layout = ({ children }: PropsWithChildren) => {
                             <a href="#contacto">Contacto</a>
                         </li>
                     </ul>
-
                 </div>
             </nav>
+
             {children}
+
             <footer className={`flex flex-col justify-between border-t h-96 py-16 ${styling}`} id="contacto">
                 <div className="container flex flex-row justify-around">
                     <div className="w-400">
@@ -96,39 +99,7 @@ const Layout = ({ children }: PropsWithChildren) => {
                         <p>Política de privacidad</p>
                     </div>
                 </div>
-                <div className="flex flex-row justify-around ">
-                    <div className="flex flex-row  gap-4">
-                        <p className="underline">Términos y condiciones</p>
-                        <p className="underline">Política de privacidad</p>
-                    </div>
 
-                    <div className="flex flex-row gap-4">
-                        <p className="underline">
-                            <a
-                                href="https://www.facebook.com"
-                                target="_blank"
-                                rel="noreferrer">
-                                Facebook
-                            </a>
-                        </p>
-                        <p className="underline">
-                            <a
-                                href="https://www.twitter.com"
-                                target="_blank"
-                                rel="noreferrer">
-                                Twitter
-                            </a>
-                        </p>
-                        <p className="underline">
-                            <a
-                                href="https://www.instagram.com"
-                                target="_blank"
-                                rel="noreferrer">
-                                Instagram
-                            </a>
-                        </p>
-                    </div>
-                </div>
             </footer>
         </>
     )

@@ -3,11 +3,11 @@ import React from 'react'
 interface ButtonProps {
     title: string
     type: "button" | "submit" | "reset"
-    textColor: string
-    bgColor: string
+    textColor?: string
+    bgColor?: string
     hoverBgColor: string
     hoverTextColor: string
-    disabled: boolean
+    disabled?: boolean
     className?: string
     clickHandler?: () => void
 }

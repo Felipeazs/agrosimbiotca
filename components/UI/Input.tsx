@@ -5,14 +5,14 @@ interface InputProps {
     type: string
     name?: string
     option?: string
-    placeholder: string
+    placeholder?: string
     items?: {
         id: string
         value: string
         nombre: string
     }[]
     className?: string
-    onInputChange?: (event: ChangeEvent) => void
+    onInputChange?: (event: ChangeEvent<HTMLInputElement>) => void
     onSelectChange?: (event: ChangeEvent) => void
 }
 
