@@ -14,21 +14,22 @@ const Layout = ({ children }: PropsWithChildren) => {
     const [disabled, setDisabled] = useState(true)
     const { pathname } = useRouter()
 
-    let styling = "bg-white text-black"
+    let navbar, footer = "bg-white text-black"
     let logo = Logo2
     if (pathname === '/') {
-        styling = "bg-black/50 text-white"
+        navbar = "bg-black/50 text-white"
+        footer = "bg-black text-white"
         logo = Logo1
     }
 
-    const submitHandler = (event: FormEvent) => { 
+    const submitHandler = (event: FormEvent) => {
         event.preventDefault()
     }
     const onInputChange = (event: ChangeEvent) => { }
 
     return (
         <>
-            <nav className={`px-20 shadow-xl fixed z-10 w-full ${styling}`}>
+            <nav className={`px-20 shadow-xl fixed z-10 w-full ${navbar}`}>
                 <div className="flex flex-row justify-between items-center h-20">
                     <div className="w-10">
                         <Link href="/">
@@ -60,7 +61,7 @@ const Layout = ({ children }: PropsWithChildren) => {
 
             {children}
 
-            <footer className={`flex flex-col justify-between border-t h-96 py-16 ${styling}`} id="contacto">
+            <footer className={`flex flex-col justify-between border-t h-96 py-16 ${footer}`} id="contacto">
                 <div className="container flex flex-row justify-around">
                     <div className="w-400">
                         <form onSubmit={submitHandler}>
@@ -99,7 +100,6 @@ const Layout = ({ children }: PropsWithChildren) => {
                         <p>Política de privacidad</p>
                     </div>
                 </div>
-
             </footer>
         </>
     )

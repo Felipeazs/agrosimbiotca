@@ -6,7 +6,7 @@ interface ButtonProps {
     textColor?: string
     bgColor?: string
     hoverBgColor: string
-    hoverTextColor: string
+    hoverTextColor?: string
     disabled?: boolean
     className?: string
     clickHandler?: () => void

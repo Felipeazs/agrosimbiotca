@@ -18,7 +18,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Hero />
-            <main className="flex flex-col justify-around text-white ">
+            <main className="flex flex-col justify-around text-white bg-black">
                 <div className="bg-background_image1 object-cover">
 
                     <div className="custom-shape-divider-top-1663882523 mt-20">

@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react'
 
 interface InputProps {
-    label: string
+    label?: string
     type: string
     name?: string
     option?: string
@@ -13,7 +13,7 @@ interface InputProps {
     }[]
     className?: string
     onInputChange?: (event: ChangeEvent<HTMLInputElement>) => void
-    onSelectChange?: (event: ChangeEvent) => void
+    onSelectChange?: (event: ChangeEvent<HTMLSelectElement>) => void
 }
 
 const Input = ({ ...props }: InputProps) => {

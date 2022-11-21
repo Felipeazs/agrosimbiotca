@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 
 interface CardProps {
-    background: string
+    background?: string
     shadow?: string
     mode?: string
     onClick?: () => void
